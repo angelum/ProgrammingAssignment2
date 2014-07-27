@@ -58,3 +58,6 @@ cacheSolve <- function(makeCacheMatrix, ...) {
       makeCacheMatrix$setInverse(inv)
       inv
 }
+
+## For a demo on how both functions work see the Test Example
+## file that is within this repository.
