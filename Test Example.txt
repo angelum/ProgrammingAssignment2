@@ -1,0 +1,40 @@
+TEST EXAMPLE
+
+This is a test example to evaluate functions makeCacheMatrix and cacheSolve
+
+1. Run both functions on Rstudio console
+
+2. Define a 2x2 matrix called M
+> M <- matrix(1:4, ncol=2, nrow=2)
+
+3. Store the value of running makeCacheMatrix(M) which is a list.
+> cacheM <- makeCacheMatrix(M)
+
+4. Compute, cache, and return the inverse of matrix M
+> cacheSolve(cacheM)
+
+     [,1] [,2]
+[1,]   -2  1.5
+[2,]    1 -0.5
+
+5. Show the original matrix stored
+> cacheM$get() 
+
+     [,1] [,2]
+[1,]    1    3
+[2,]    2    4
+
+6. Show the inverse of the matrix stored
+> cacheM$getInverse()
+
+     [,1] [,2]
+[1,]   -2  1.5
+[2,]    1 -0.5
+
+7. Show the inverse of M called from cache
+> cacheSolve(cacheM)  
+
+getting cached data
+     [,1] [,2]
+[1,]   -2  1.5
+[2,]    1 -0.5
